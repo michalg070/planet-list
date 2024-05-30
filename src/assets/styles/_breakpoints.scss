@@ -1,0 +1,25 @@
+@mixin mobile-landscape {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+@mixin desktop-small {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop-big {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
