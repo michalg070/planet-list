@@ -1,0 +1,45 @@
+.ui-pagination {
+  display: flex;
+  list-style: none;
+  gap: rem(4px);
+  padding-inline-start: 0;
+
+  :deep(li) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(30px);
+    height: rem(30px);
+    border: 1px solid $grey-1;
+    border-radius: rem(4px);
+    padding: 0 rem(4px);
+    will-change: background-color, border, color;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover:not(.disabled) {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: $white;
+    }
+
+    &.active {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: $white;
+    }
+
+    &.disabled {
+      color: $grey-1;
+      cursor: not-allowed;
+    }
+  }
+}
