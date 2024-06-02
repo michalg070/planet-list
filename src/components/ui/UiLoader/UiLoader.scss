@@ -1,0 +1,23 @@
+.ui-loader {
+  display: block;
+  height: auto;
+  animation: spinner 1s infinite linear;
+
+  &--small {
+    width: rem(30px);
+  }
+
+  &--medium {
+    width: rem(50px);
+  }
+
+  &--large {
+    width: rem(75px);
+  }
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
