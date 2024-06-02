@@ -1,0 +1,126 @@
+.ui-table {
+  &__header {
+    display: block;
+    margin-bottom: rem(20px);
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__table {
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+
+    @include tablet {
+      display: table;
+      max-width: 100%;
+
+      table-layout: fixed;
+      overflow-wrap: break-word;
+    }
+  }
+
+  &__thead {
+    display: none;
+    height: rem(40px);
+    background: rgba($grey-1, 0.25);
+    padding-left: rem(14px);
+
+    white-space: nowrap;
+
+    @include tablet {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__body {
+    display: block;
+
+    @include tablet {
+      display: table-row-group;
+    }
+  }
+
+  &__row {
+    display: block;
+
+    @include tablet {
+      display: table-row;
+    }
+
+    td {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: rem(45px);
+      padding: 0 rem(14px);
+      margin: 0;
+      border-bottom: 1px solid $grey-1;
+
+      @include tablet {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      &:last-child {
+        border-bottom: 2px solid $grey-3;
+
+        @include tablet {
+          border-bottom: 1px solid $grey-1;
+        }
+      }
+    }
+  }
+
+  &__row-mobile-title {
+    display: block;
+    font-weight: bold;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__row--loader,
+  &__row--no-data {
+    height: 40vh;
+
+    @include tablet {
+      height: 45vh;
+    }
+
+    td {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+
+      @include tablet {
+        display: table-cell;
+      }
+    }
+
+    td > * {
+      margin: rem(15px) auto;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: rem(20px);
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+}
