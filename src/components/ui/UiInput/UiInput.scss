@@ -1,0 +1,47 @@
+.ui-input {
+  position: relative;
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    width: 100%;
+    height: rem(30px);
+    padding: 0 rem(50px) 0 rem(10px);
+    box-sizing: border-box;
+    color: $font-color;
+
+    border: 1px solid $grey-3;
+    border-radius: 4px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 1px solid $primary;
+    }
+
+    &::placeholder {
+      color: $grey-3;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+
+    right: rem(10px);
+    bottom: 50%;
+    transform: translateY(100%);
+    color: $grey-3;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+
+    @include tablet {
+      transform: translateY(80%);
+    }
+  }
+}
