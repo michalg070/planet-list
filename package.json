@@ -12,7 +12,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@remixicon/vue": "^4.2.0",
+    "@svifty7/vue-paginate": "^0.0.10",
+    "axios": "^1.7.2",
     "vue": "^3.4.21",
+    "vue-multiselect": "^3.0.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
@@ -21,11 +25,15 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/test-utils": "^2.4.5",
     "eslint": "^8.57.0",
+    "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
     "sass": "^1.77.3",
     "vite": "^5.2.8",
     "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=20.x"
   }
 }
