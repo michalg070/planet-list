@@ -1,0 +1,11 @@
+.planet-list {
+  &__utils {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+
+    @include tablet {
+      grid-template-columns: 200px 200px;
+    }
+  }
+}
