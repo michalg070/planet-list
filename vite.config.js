@@ -12,23 +12,21 @@ const prepareAdditionalData = () => {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(() => {
-  return {
-    plugins: [vue()],
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: prepareAdditionalData()
-        }
-      }
-    },
-    server: {
-      port: 8080
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: prepareAdditionalData()
+      }
+    }
+  },
+  server: {
+    port: 8080
   }
 })
