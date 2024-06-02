@@ -57,6 +57,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-size: rem(13px);
       height: rem(45px);
       padding: 0 rem(14px);
       margin: 0;
@@ -74,6 +75,10 @@
           border-bottom: 1px solid $grey-1;
         }
       }
+    }
+
+    a {
+      color: $primary;
     }
   }
 

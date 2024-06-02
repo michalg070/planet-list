@@ -3,9 +3,9 @@ export const columns = [
   { key: 'population', label: 'Population' },
   { key: 'rotation_period', label: 'Rotation Period' },
   { key: 'climate', label: 'Climate' },
-  { key: 'diameter', label: 'Diameter' },
   { key: 'gravity', label: 'Gravity' },
-  { key: 'created', label: 'Created' }
+  { key: 'created', label: 'Created' },
+  { key: 'url', label: 'URL' }
 ]
 
 export const sortOptions = [
@@ -14,6 +14,6 @@ export const sortOptions = [
   { label: 'Rotation Period', value: 'rotation_period' },
   { label: 'Climate', value: 'climate' },
   { label: 'Gravity', value: 'gravity' },
-  { label: 'Diameter', value: 'diameter' },
-  { label: 'Created', value: 'created' }
+  { label: 'Created', value: 'created' },
+  { label: 'URL', value: 'url' }
 ]

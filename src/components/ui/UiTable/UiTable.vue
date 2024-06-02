@@ -48,7 +48,13 @@ defineProps({
           <td v-for="column in columns" :key="column.key">
             <span class="ui-table__row-mobile-title"> {{ column.label }}: </span>
 
-            {{ item[column.key] || 'N/A' }}
+            <template v-if="column.key === 'url'">
+              <a :href="item[column.key]" target="_blank">{{ item[column.key] }}</a>
+            </template>
+
+            <template v-else>
+              {{ item[column.key] || 'N/A' }}
+            </template>
           </td>
         </tr>
       </tbody>
